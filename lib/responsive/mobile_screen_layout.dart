@@ -37,6 +37,12 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   void navigationTapped(int page){
     pageController.jumpToPage(page);
   }
+
+  void onPageChanged(int page){
+    setState((){
+      _page=page;
+    });
+  }
   @override
   void initState(){
     super.initState();
@@ -61,7 +67,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
           Text('profile')
         ],
         controller: pageController,
-      //  onPageChanged: onPageChanged,
+        onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,
