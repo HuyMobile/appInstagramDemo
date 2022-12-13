@@ -8,6 +8,7 @@ class AuthMethods{
   final FirebaseAuth _auth=FirebaseAuth.instance;
   final FirebaseFirestore _firestore= FirebaseFirestore.instance;
 
+
   //sign up user
   Future<String>signUpUser({
     required String email,
